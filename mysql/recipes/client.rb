@@ -40,10 +40,6 @@ package "mysql-devel" do
   action :install
 end
 
-if platform?(%w{ redhat centos fedora suse scientific amazon })
-  package 'ruby-mysql'
-else
-  gem_package "mysql" do
-    action :install
-  end
+gem_package "mysql" do
+  action :install
 end
